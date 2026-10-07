@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real IMEI Check - Check IMEI Number Online</title>
+    <meta name="description" content="Use Real IMEI Check to validate an IMEI number online using the IMEI checksum. Fast, simple and free.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">
+                <img src="Real.png" alt="Real IMEI Check" class="logo-image">
+                <span>Real IMEI Check</span>
+            </a>
+
+            <nav id="siteMenu" class="site-menu hidden" aria-label="Main menu">
+                <a href="index.html">Home</a>
+                <a href="#checker">IMEI Checker</a>
+                <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                <a href="about-us.html" target="_blank" rel="noopener noreferrer">About Us</a>
+                <a href="terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                <div class="menu-theme-options" role="group" aria-label="Color theme">
+                    <button class="menu-theme-option" id="lightThemeButton" type="button" aria-pressed="false">Light mode</button>
+                    <button class="menu-theme-option" id="darkThemeButton" type="button" aria-pressed="true">Dark mode</button>
+                </div>
+            </nav>
+
+            <label class="language-control">
+                <span class="visually-hidden">Language</span>
+                <select id="languageSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </label>
+            <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="checker">
+            <div class="container hero-content">
+
+                <span class="badge">IMEI Format & Checksum Checker</span>
+
+                <h1>Check Your IMEI Number</h1>
+
+                <p class="subtitle">
+                    Enter your 15-digit IMEI number to check whether
+                    it passes the standard IMEI checksum validation.
+                </p>
+
+
+                <!-- Checker Card -->
+                <div class="checker-card">
+
+                    <label for="imeiInput">Enter IMEI Number</label>
+
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="imeiInput"
+                            placeholder="Enter 15-digit IMEI"
+                            maxlength="15"
+                            inputmode="numeric"
+                            autocomplete="off"
+                        >
+
+                        <button id="checkButton">
+                            Check IMEI
+                        </button>
+                    </div>
+
+                    <p class="input-help">
+                        Enter exactly 15 digits.
+                    </p>
+
+
+                    <!-- Result -->
+                    <div id="result" class="result hidden">
+
+                        <div id="resultIcon" class="result-icon"></div>
+
+                        <div>
+                            <h2 id="resultTitle"></h2>
+                            <p id="resultMessage"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- About -->
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <h2>What is an IMEI?</h2>
+
+                <p>
+                    An IMEI (International Mobile Equipment Identity) number is a unique 15-digit number associated with a mobile device. It is commonly used to identify a phone on cellular networks and can be useful when checking or managing information about your device. You can usually find your IMEI by dialing *#06# on your phone, checking the device settings, or looking at the original packaging. Our Real IMEI Check provides a quick way to verify whether an entered 15-digit IMEI passes the standard checksum validation. This can help you catch simple formatting or number-entry mistakes before using the IMEI elsewhere. Keep in mind that a valid checksum does not prove that a device is genuine, stolen or not stolen, blacklisted, unlocked, under warranty, or compatible with a particular network. The checker is designed as a simple informational tool for basic IMEI validation, without requiring complicated steps or technical knowledge.
+                </p>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <h3>15 Digits</h3>
+                        <p>
+                            A standard IMEI normally contains 15 digits.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Checksum</h3>
+                        <p>
+                            The final digit is used as a check digit.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Free</h3>
+                        <p>
+                            Check your IMEI format instantly without registration.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="about guide" id="find-imei">
+            <div class="container guide-content">
+                <h2>How to Find Your IMEI Number</h2>
+                <p>Finding your IMEI number is usually quick and does not require any special app. Here are the easiest ways to find it:</p>
+
+                <article class="guide-step">
+                    <h3>1. Dial <code>*#06#</code></h3>
+                    <p>Open the Phone or Dialer app on your smartphone and enter:</p>
+                    <p><code>*#06#</code></p>
+                    <p>Your device should immediately display its IMEI number on the screen. If your phone supports two SIM cards, you may see two IMEI numbers.</p>
+                </article>
+
+                <article class="guide-step">
+                    <h3>2. Check Your Phone Settings</h3>
+                    <p>You can also find the IMEI through your device settings.</p>
+                    <p><strong>Android:</strong> Go to <strong>Settings → About Phone → IMEI</strong>. The exact menu name may vary depending on your phone manufacturer.</p>
+                    <p><strong>iPhone:</strong> Go to <strong>Settings → General → About → IMEI</strong>.</p>
+                </article>
+
+                <article class="guide-step">
+                    <h3>3. Check the Original Box</h3>
+                    <p>If you no longer have access to your phone, check the original device packaging. The IMEI is often printed on a label along with other device information.</p>
+                </article>
+
+                <article class="guide-step">
+                    <h3>Which Method Should You Use?</h3>
+                    <p>The <code>*#06#</code> method is usually the quickest because it works directly from the phone's dialer. Once you have your 15-digit IMEI, enter it into our checker to verify whether it passes the standard IMEI checksum validation.</p>
+                </article>
+
+                <p class="guide-important"><strong>Important:</strong> Never share your IMEI publicly unless you have a specific reason to do so. Treat it as device information rather than something to post openly online.</p>
+            </div>
+        </section>
+
+        <section class="used-phone" id="used-phone">
+            <div class="container used-phone-content">
+                <h2>Buying a Used Phone? Check the IMEI First.</h2>
+                <p>Before you buy a used phone, take a moment to check its IMEI.</p>
+
+                <div class="used-phone-tips">
+                    <article class="used-phone-tip">
+                        <h3>Confirm the number</h3>
+                        <p>Compare the IMEI in the phone with the number on its box or paperwork, if available.</p>
+                    </article>
+
+                    <article class="used-phone-tip">
+                        <h3>Check before paying</h3>
+                        <p>Use our checker to see whether the IMEI has the expected format and passes the checksum test.</p>
+                    </article>
+
+                    <article class="used-phone-tip">
+                        <h3>Check more than the IMEI</h3>
+                        <p>A valid IMEI does not prove a phone is genuine, unlocked, or clear of a blacklist. Check the phone, account locks, network compatibility, paperwork, and seller too.</p>
+                    </article>
+                </div>
+
+                <p class="used-phone-reminder"><strong>Remember:</strong> An IMEI check is one useful step, not a guarantee that a phone is safe to buy.</p>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is an IMEI number?</summary>
+                        <p>IMEI stands for International Mobile Equipment Identity. It is a unique identifier associated with a mobile device and is commonly represented as a 15-digit number. Mobile networks and device-related systems can use IMEI numbers to identify compatible devices.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I find my IMEI number?</summary>
+                        <p>On many mobile phones, you can display the IMEI by dialing *#06#. You can also usually find it in your device settings under an option such as “About Phone,” “About Device,” or similar. The exact location can vary depending on the manufacturer and operating system.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What does the Real IMEI Check check?</summary>
+                        <p>Our current checker performs basic IMEI validation. It checks whether the entered value contains the expected number of digits and whether it passes the standard IMEI checksum calculation.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What does a valid IMEI result mean?</summary>
+                        <p>A valid result means that the IMEI you entered has the expected format and passes the checksum validation performed by our tool. It does not guarantee that the device itself is genuine, that the IMEI has not been altered, or that the device is free from blacklist or carrier restrictions.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What does an invalid IMEI result mean?</summary>
+                        <p>An invalid result means that the number entered does not pass one or more of the basic validation checks. Check the digits carefully and make sure that you entered the correct IMEI without spaces, letters, or additional characters.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I check an iPhone IMEI?</summary>
+                        <p>Yes. iPhones have IMEI numbers, and you can use our basic validator to check the format and checksum of an iPhone IMEI.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I check an Android IMEI?</summary>
+                        <p>Yes. Android phones also commonly have IMEI numbers. You can enter the IMEI into our checker to perform the same basic validation.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does an IMEI checker tell me whether a phone is stolen?</summary>
+                        <p>Not necessarily. Basic IMEI validation only checks the structure and checksum of the number. Determining whether a device has been reported lost or stolen requires access to an appropriate blacklist or carrier database. A valid checksum should not be interpreted as proof that a device is clear or legitimate.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does a valid IMEI mean the phone is genuine?</summary>
+                        <p>No. A number passing checksum validation only means that it has a valid mathematical structure according to the validation method used. It does not independently prove the authenticity of a physical device.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can an IMEI checker tell me the phone's location?</summary>
+                        <p>No. An IMEI number by itself does not provide a user with a phone's live location, photographs, messages, accounts, or other private device content.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can an IMEI be changed?</summary>
+                        <p>Device identification systems can be subject to tampering, but changing or manipulating an IMEI may be restricted or illegal depending on the country and circumstances. Real IMEI Check does not provide instructions for modifying, spoofing, or bypassing device identifiers.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is Real IMEI Check free?</summary>
+                        <p>Yes. The basic IMEI validation tool is provided free of charge.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I need to create an account?</summary>
+                        <p>No account is required to use the basic IMEI checker.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does the checker guarantee that my phone will work on a network?</summary>
+                        <p>No. Network compatibility can depend on factors such as supported bands, carrier policies, SIM restrictions, regional variants, and device configuration. IMEI checksum validation does not determine network compatibility.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Why does my phone have two IMEI numbers?</summary>
+                        <p>Many dual-SIM devices have two IMEI numbers because each cellular radio/SIM connection can have its own device identifier. If your phone displays IMEI 1 and IMEI 2, you may need to check the relevant number depending on the situation.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is it safe to enter an IMEI online?</summary>
+                        <p>An IMEI is a device identifier rather than the contents of your phone. However, you should still understand how a website handles information submitted to it. Real IMEI Check aims to keep its basic validation process simple and transparent. Please review our Privacy Policy for information about website data and third-party services.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does Real IMEI Check belong to Apple or Android?</summary>
+                        <p>No. Real IMEI Check is an independent service and is not operated by or affiliated with Apple, Google, Samsung, or another device manufacturer unless specifically stated.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Why is my IMEI not working?</summary>
+                        <p>First, verify that you copied the correct number and that all digits are entered correctly. Make sure there are no spaces, letters, or extra characters. If the number still fails validation, compare it with the IMEI shown in your device settings or on the original device packaging.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I use the checker on a computer?</summary>
+                        <p>Yes. The website is designed to work through a modern web browser on computers, tablets, and mobile devices.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What should I do if I believe my phone has a blacklisted IMEI?</summary>
+                        <p>If you believe an IMEI has been incorrectly blacklisted, contact the relevant mobile carrier, seller, manufacturer, or authorized service provider. Keep proof of purchase and other ownership documentation where applicable.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can Real IMEI Check identify my exact phone model?</summary>
+                        <p>The basic version of our checker is focused on IMEI format and checksum validation. Model identification requires additional device/TAC databases and is not guaranteed by checksum validation alone.</p>
+                    </details>
+
+                   
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container contact-content">
+                <h2>Still have questions? <strong>Contact Us!</strong></h2>
+                <div class="contact-card">
+                         <h3>Drop your Message</h3> </br>
+            
+
+                    <form id="contactForm">
+                        <div class="contact-field">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" autocomplete="name" required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Your message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="contactConfirmation" class="contact-confirmation hidden" role="status" aria-live="polite">
+                        <h3>Gmail draft opened</h3>
+                        <p>Send the message in Gmail, then return here and confirm to refresh this page.</p>
+                        <a id="contactGmailLink" class="contact-gmail-link" href="#" target="_blank" rel="noopener noreferrer">Open Gmail draft</a>
+                        <button id="contactSentButton" type="button">I sent it — refresh page</button>
+                        <button id="contactBackButton" type="button">Back to form</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Real IMEI Check. All rights reserved.</p>
+
+            <div>
+                <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                <a href="about-us.html" target="_blank" rel="noopener noreferrer">About us</a>
+                <a href="terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="localization.js"></script>
+
+</body>
+</html>

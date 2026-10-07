@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Real IMEI Check</title>
+    <meta name="description" content="Learn about Real IMEI Check, its purpose, and what an IMEI validation can and cannot tell you.">
+
+    <script>
+        document.documentElement.dataset.theme =
+            localStorage.getItem("imei-checker-theme") === "dark" ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <img src="Real.png" alt="Real IMEI Check" class="logo-image">
+                <span>Real IMEI Check</span>
+            </a>
+            <nav id="siteMenu" class="site-menu hidden" aria-label="Main menu">
+                <a href="index.html">Home</a>
+                <a href="index.html#checker">IMEI Checker</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="about-us.html">About Us</a>
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <div class="menu-theme-options" role="group" aria-label="Color theme">
+                    <button class="menu-theme-option" id="lightThemeButton" type="button" aria-pressed="false">Light mode</button>
+                    <button class="menu-theme-option" id="darkThemeButton" type="button" aria-pressed="true">Dark mode</button>
+                </div>
+            </nav>
+            <label class="language-control">
+                <span class="visually-hidden">Language</span>
+                <select id="languageSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </label>
+            <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container about-copy">
+                <h1>About Real IMEI Check</h1>
+
+                <p>Welcome to Real IMEI Check, a simple and easy-to-use online tool created to help people understand and validate IMEI numbers without complicated steps, registrations, or unnecessary technical jargon. An IMEI, or International Mobile Equipment Identity, is a number associated with a mobile device and is commonly used by networks and device services to identify phones and other compatible equipment. Our goal is to make basic IMEI validation accessible to everyone, whether you are checking your own phone, learning about how IMEI numbers work, developing a mobile-related application, or simply trying to understand whether an IMEI has the correct structure.</p>
+
+                <p>Real IMEI Check focuses on providing a fast and straightforward experience. You enter an IMEI number, and our checker analyzes its format and standard checksum to determine whether the number passes basic IMEI validation. The process is designed to be simple enough for anyone to use while still following the standard validation principles used for IMEI numbers. We believe useful online tools do not need to be complicated, overloaded with unnecessary features, or hidden behind registration forms.</p>
+
+                <p>Our website is designed primarily as an informational and validation tool. A successful IMEI validation means that the number passes the structural and checksum checks performed by our tool. It does not, by itself, confirm that a device is genuine, that it has not been reported lost or stolen, that it is free from a carrier or network restriction, or that it is eligible for warranty service. Those types of information require access to appropriate carrier, manufacturer, government, or specialized databases and may vary by country and device.</p>
+
+                <p>We are continuously interested in improving the accuracy, usability, speed, and accessibility of Real IMEI Check. As the website develops, we may add additional educational resources and tools that help visitors better understand IMEI numbers, mobile devices, and related terminology. Our aim is to keep the service simple while providing useful information that people can understand and trust.</p>
+
+                <p>Real IMEI Check is an independent website and is not affiliated with Apple, Google, Samsung, Xiaomi, Huawei, or any mobile network operator or device manufacturer unless explicitly stated. Brand names and trademarks belong to their respective owners.</p>
+
+                <p>Thank you for using Real IMEI Check. Our goal is simple: provide a fast, understandable, and useful place to check and learn about IMEI numbers.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Real IMEI Check. All rights reserved.</p>
+            <div>
+                <a href="index.html">IMEI Checker</a>
+            </div>
+        </div>
+    </footer>
+    <script src="localization.js"></script>
+</body>
+</html>
